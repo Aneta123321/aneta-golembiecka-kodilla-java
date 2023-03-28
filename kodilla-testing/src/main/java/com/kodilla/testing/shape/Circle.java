@@ -17,6 +17,8 @@ package com.kodilla.testing.shape;
             return Double.compare(circle.radius, radius) == 0;
         }
 
+
+
         @Override
         public int hashCode() {
             long temp = Double.doubleToLongBits(radius);
