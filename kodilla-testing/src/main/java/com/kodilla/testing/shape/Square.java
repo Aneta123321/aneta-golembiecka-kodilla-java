@@ -16,6 +16,7 @@ public class Square implements Shape {
         return Double.compare(square.edgeLength, edgeLength) == 0;
     }
 
+
     @Override
     public int hashCode() {
         long temp = Double.doubleToLongBits(edgeLength);

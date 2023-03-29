@@ -19,6 +19,7 @@ package com.kodilla.testing.shape;
 
 
 
+
         @Override
         public int hashCode() {
             long temp = Double.doubleToLongBits(radius);
