@@ -12,6 +12,7 @@ public class ShapeCollectorTestSuite {
     public void testAddFigure(){
 
 
+
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
         Shape shape = new Square(4);
