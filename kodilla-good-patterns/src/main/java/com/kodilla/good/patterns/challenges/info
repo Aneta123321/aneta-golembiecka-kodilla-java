@@ -1,0 +1,10 @@
+Information Service odpowiada za informowanie uzytkownika np wysyla maile do uzytkownika
+OrderDto obiekt, ktory przetrzymuje info nt zamowienia
+OrderRepository utworz zamowienia
+OrderRequest przetrzymuje wszystkie dane z zamowienia
+OrderService wysyla zamowienie do bazy danych i zwraca true jezeli poprawne jest zamowienie i false jezlei cos poszlo nie tak
+User ma info o uzytkowniku
+
+ProductOrderService czyli caly serwis, ktory odpowiada za caly proces zwiaznay w utworz zamowienia i zwraca obiekt Dto=data transfer object
+(jest to odzwierciedlenie obiektu z bazy danych)
+
