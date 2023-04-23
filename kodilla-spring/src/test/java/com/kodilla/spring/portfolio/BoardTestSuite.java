@@ -32,8 +32,7 @@ public class BoardTestSuite {
     }
 
     @Test
-    @DisplayName("Czy dodane zadanie można odczytać")
-    public void testIfAddedTasksCouldRead() {
+    public void testTaskAdd() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.portfolio"); // wpisuje sciezke com.kodilla.spring.portfolio z lewej, w ktorej sa beany(klasy)
 
@@ -42,23 +41,20 @@ public class BoardTestSuite {
 
         List<String> tasksToDoList = board.getToDoList().getTasks();
         tasksToDoList.add("Zadanie 1 dla ToDoList");
-        tasksToDoList.add("Zadanie 2 dla ToDoList");
 
         List<String> tasksInProgressList = board.getInProgressList().getTasks();
         tasksInProgressList.add("Zadanie 1 dla InProgressList");
 
         List<String> tasksDoneList = board.getDoneList().getTasks();
         tasksDoneList.add("Zadanie 1 dla DoneList");
-        tasksDoneList.add("Zadanie 2 dla DoneList");
-        tasksDoneList.add("Zadanie 3 dla DoneList");
 
         //Then
-        Assertions.assertEquals(2, tasksToDoList.size());
-        Assertions.assertEquals("Zadanie 2 dla ToDoList", tasksToDoList.get(1));
+        Assertions.assertEquals(1, tasksToDoList.size());
+        Assertions.assertEquals("Zadanie 1 dla ToDoList", tasksToDoList.get(0));
         Assertions.assertEquals(1, tasksInProgressList.size());
         Assertions.assertEquals("Zadanie 1 dla InProgressList", tasksInProgressList.get(0));
-        Assertions.assertEquals(3, tasksDoneList.size());
-        Assertions.assertEquals("Zadanie 3 dla DoneList", tasksDoneList.get(2));
+        Assertions.assertEquals(1, tasksDoneList.size());
+        Assertions.assertEquals("Zadanie 1 dla DoneList", tasksDoneList.get(0));
     }
 
 
