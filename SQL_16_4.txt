@@ -1,0 +1,14 @@
+-- 16.4
+select i1.*, i2.NAME
+from issues i1
+         join issueslists i2 on i1.ISSUESLIST_ID = i2.ID;
+
+select i.*, u.FIRSTNAME, u.LASTNAME
+from issues i
+         join users u on i.USER_ID_ASSIGNEDTO = u.ID;
+
+SELECT U.FIRSTNAME, U.LASTNAME, COUNT(i.USER_ID_ASSIGNEDTO) AS POSTS_NUMBER
+FROM users U
+LEFT JOIN issues i on i.USER_ID_ASSIGNEDTO = u.ID
+GROUP BY U.FIRSTNAME, U.LASTNAME
+HAVING COUNT(i.USER_ID_ASSIGNEDTO) > 0;
