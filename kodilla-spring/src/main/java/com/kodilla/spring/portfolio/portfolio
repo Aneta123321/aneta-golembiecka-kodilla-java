@@ -1,0 +1,7 @@
+1/ klasa Board
+sa 3 typy zadan: to do list itp... i konstruktor i gettery
+2/ Task list : lista z zadaniami (mamy tresc zadan i to jest lista)
+3/ BoardConfig jest utworzenie beanow
+4/pliczek build.gradle tu sa wskazania a jakich bibliotek ma korzystac program a same biblioteki sa w External Libraries
+5/ Board test Suite na gorze pobiermayu beany
+w when pobieram tablice, pobieram zadanie, dodaje 3 zadania
